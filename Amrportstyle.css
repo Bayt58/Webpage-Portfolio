@@ -1,0 +1,342 @@
+/* UTILITIES */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+  
+  body {
+    font-family:'Roboto', sans-serif;
+    color: #fff; 
+    background: radial-gradient(circle, #000000, #3C1D42);
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: all 0.2s ease 0s;
+    margin: 0;
+    
+}
+  
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  h1 {
+    font-size: 30px; 
+    font-weight: normal; 
+}
+  
+/*NAVBAR STYLING STARTS*/
+       .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        text-align: center;
+        margin-left: 550px;
+        background-color: transparent;
+        color: #fff;
+        position: fixed;
+        
+      }
+      
+      .nav-links a {
+        color: #fff;
+        
+      }
+          
+      
+      /* NAVBAR MENU */
+      .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 30px;
+       
+        
+      }
+      
+      .menu li:hover {
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+      
+      .menu li {
+        padding: 5px 14px;
+      }
+      
+
+    
+      /*Main*/
+      .main {
+        max-width: 1300px;
+        margin: -100px auto 0px;
+        padding: 25px;
+    }
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .about-title, .about-experience-heading, .skills-heading {
+        font-size: 32px;
+        font-weight: 400;
+        
+        -webkit-background-clip: text;
+        color: rgba(192, 192, 192, 0.8);
+    }
+    .about-description {
+        margin: 20px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .instagram {
+        position: relative;
+        display: inline-block;
+        color: #9A79CF;
+    }
+    /*Experience Section*/
+
+    .about-experience-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 20px;
+    }
+    .about-experience-item {
+        display: flex;
+        margin-bottom: 10px;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .about-experience-date {
+        font-size: 18px;
+        line-height: 1.5;
+        width: 200px;
+    }
+    .about-experience-title {
+        font-size: 23px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #9A79CF;
+    }
+    .about-experience-description {
+        font-size: 20px;
+        line-height: 1.6;
+        max-width: 1100px;
+    }
+    .skills-container, .about-container, .about-experience-section {
+        gap: 20px;
+    }
+
+    /*Skills Section*/
+
+    .skills-container {
+        gap: 10px;
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    .skills-wrapper {
+        gap: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+    .skills-wrapper span {
+        padding: 5px;
+        border-radius: 2px;
+        border: 1px solid #333333;
+        background-color: #232323;
+        box-shadow: 0 2px 3px #0000003d;
+    }
+
+    /*Fotter Socials*/
+
+    .footer {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        padding: 30px 0;
+        border-top: 1px solid #2d2d2d;
+        margin-top: 30px;
+    }
+    .footer-social {
+        display: flex;
+        gap: 30px;
+        font-size: 24px;
+    }
+    .footer a:-webkit-any-link {
+        color: #9A79CF;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+      /* Sections */
+
+
+      .section {
+        height: 10vh; 
+        border: 1px ; 
+    }
+    
+
+    /*Home*/
+
+      .max-width {
+        padding: 23px;
+        margin: 100px 400px;
+      }
+      .home-content{margin-bottom: 120px;}
+      .home-content .text-1 {
+        font-size: 72px;
+        text-align: center;
+        background: linear-gradient(90deg, #3C1D42, #ffffff);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: 'Roboto', sans-serif;
+      }
+      .home-content .text-2 {
+        font-size: 72px;
+        text-align: center;
+        color: #3C1D42;
+      }
+       .home-content .text-3 {
+        font-size: 32px;
+        text-align: center;
+        background: radial-gradient(ellipse at center, #ffffff 0%, #ffffff 40%, #3C1D42 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: 'Roboto', sans-serif;
+      }
+       .home-content a {
+        font-size: 20px;
+      }
+
+      /*ChatBot*/
+      
+    #chat-container {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        max-width: 600px;
+        background-color: #333; 
+        box-shadow: 0 0 20px rgba(154, 121, 207, 0.5), 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 1.2s ease;
+    }
+    
+    #chat-container.active {
+        transform: translateX(0);
+    }
+    
+    #chat-header {
+        background-color: #9A79CF; 
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+   
+    
+    #chat-messages {
+        padding: 20px;
+        overflow-y: auto;
+        max-height: 300px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+    
+    #user-input {
+        width: 80%;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    #send-button {
+        background-color: #9A79CF;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+    #close-button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+  }
+    
+    .message {
+        background-color: #9A79CF;
+        color: #fff;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    
+    .options {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; 
+        gap: 5px; 
+    }
+    
+    .option-button {
+        background-color: #3C1D42;
+        color: #fff;
+        padding: 5px; 
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        overflow-y: auto;
+        max-height: 300px;
+        text-align: center; 
+    }
+
+    /*Stars*/
+
+    .stars-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+  }
+  
+  .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #fff;
+      box-shadow: 0 0 5px #fff;
+      animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+      to {
+          transform: translateY(100vh);
+          opacity: 0;
+      }
+  }
+    
+
+
+     

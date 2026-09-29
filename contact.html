@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="contact_us_2">
+        <div class="responsive-container-block big-container">
+            <div class="blueBG"></div>
+            <div class="responsive-container-block container">
+                <form class="form-box">
+                    <div class="container-block form-wrapper">
+                        <a href="Home.html"><i class='bx bx-home-alt HomeIcon'></i></a>
+                        <p class="text-blk contactus-head">Contact Us</p>
+                        <br>
+                        <p class="text-blk contactus-subhead">We normally answer within 1-2 business days</p>
+                        <div class="responsive-container-block">
+                            <div class="responsive-container-block">
+                                <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt">
+                                    <p class="text-blk input-title">
+                                        FIRST NAME
+                                    </p>
+                                    <input class="input" id="ijowk" name="FirstName" placeholder="Please enter first name...">
+                                </div>
+                                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                                    <p class="text-blk input-title">
+                                        LAST NAME
+                                    </p>
+                                    <input class="input" id="indfi" name="LastName" placeholder="Please enter last name...">
+                                </div>
+                                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                                    <p class="text-blk input-title">
+                                        EMAIL
+                                    </p>
+                                    <input class="input" id="ipmgh" name="Email" placeholder="Please enter email...">
+                                </div>
+                                
+                                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                                    <p class="text-blk input-title">
+                                        PERSON TO Contact
+                                    </p>
+                                    <select class="input" id="imgis" name="person">
+                                        <option value="Team member"></option>
+                                        <option value="Abdelrahman Al HajAli">Abdelrahman Al HajAli</option>
+                                        <option value="Amr Ghuneim">Amr Ghuneim</option>
+                                        <option value="Mohammad Reyad">Mohammad Reyad</option>                       
+                                        <option value="Sarah Eyad">Sarah Eyad</option>
+                                    </select>
+                                </div>
+                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i">
+                                    <p class="text-blk input-title">
+                                        WHAT DO YOU HAVE IN MIND
+                                    </p>
+                                    <textarea class="textinput" name="query" id="i5vyy" placeholder="Please enter query..."></textarea>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <button id="submitButton" class="button" onclick="validateForm()">
+                                    <span>Submit</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById('ijowk').value;
+            var lastName = document.getElementById('indfi').value;
+            var email = document.getElementById('ipmgh').value;
+            var person = document.getElementById('imgis').value;
+            var query = document.getElementById('i5vyy').value;
+
+            if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || person.trim() === '' || query.trim() === '') {
+                alert('All fields must be filled in.');
+                return;
+            }
+
+            
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            alert('Form submitted successfully!');
+        }
+    </script>
+</body>
+</html>

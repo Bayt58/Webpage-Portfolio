@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Mohammed.css">
+    <title>MR</title>
+</head>
+
+<body>
+
+
+    <section>
+        <header class="container">
+            <footer>
+            <div class="page">
+                <div class="logo">
+                    <a href="#">MR</a>
+                </div>
+                <input type="checkbox" id="check">
+
+                <label for="click" class="mainicon">
+                    <div class="menu">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                </label>
+                <ul>
+                    <li><a href="Home.html"  style="--navAni:1">Home</a></li>
+                    <li><a href="#Section2" style="--navAni:2">About Me</a></li>
+                    <li><a href="#Section3" style="--navAni:2">Services</a></li>
+                    <li><a href="#Section4" style="--navAni:5">Contact Me</a></li>
+                </ul>
+                <label class="mode">
+                    <input type="checkbox" id="darkModeToggle">
+                    <i class='bx bxs-moon'></i>
+                </label>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="main">
+                <div class="detail">
+                    <h3>Hi, I'm</h3>
+                    <h1><span style="color:dodgerblue;">Mohammed</span>Reyad</h1>
+                    <p>I'm a  Web Developer. Student at Princess Sumaya University For Technology, currently Studying Software Engineering .
+
+                    </p>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/mohammed-reyad" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://www.snapchat.com/add/m7x_58" style="--socialAni:1"><i class='bx bxl-snapchat'></i></a>
+                        <a href="https://www.instagram.com/m7x_58?igsh=MXRhejAyZmU5d2FyNQ==" style="--socialAni:1"><i class='bx bxl-instagram'></i></a>
+                        <a href="mailto:moh20210852@std.psut.edu.jo" style="--socialAni:1"><i class='bx bxl-gmail '></i></a>
+                        
+
+                    </div>
+                </div>
+                <div class="images">
+                    <img src="Mohammed.png" alt="Photo" class="imgs" width="75%" height="75%">
+                </div>
+            </div>
+        </div>
+        <Section id="Section2">
+        <div class="container">
+            <div class="main">
+                <div class="detail">
+        <div class="About">
+            <hr>
+            <br>
+            <br>
+            <br>
+            <h3><span style="color:dodgerblue;font-size: 30px;">About</span> Me</span></h3>
+            <br>
+<p>As a seasoned and dedicated professional in the field of software engineering, I bring a wealth of experience and expertise </p> 
+<p>to the table.  With a proven track record of successfully designing, developing, and implementing software solutions, I am </p> 
+<p>committed to delivering high-quality results that align with industry best practices.  My proficiency in various programming </p>
+<p>languages, problem-solving skills, and a keen eye for innovation enable me to contribute effectively to projects.  Continuously </p>
+<p>staying up to date of technological advancements, I am passionate about creating robust and scalable software that not only meets </p>
+<p>but exceeds client expectations.  My collaborative approach, coupled with a strong analytical mindset, allows me to thrive in </p>
+<p>dynamic and challenging environments.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </Section>
+        <hr>
+        <br>
+        <div class="container">
+            <div class="main">
+                <div class="detail">
+        <Section id="Section3">
+        <h1><span style="color:dodgerblue; text-align: center; font-size: 30px;">Services</span></h1>
+        <br>
+         <div class="card1">
+            <img src="dev.png" alt="Avatar" style="width:80%">
+            <div class="containercard">
+              <h4><b>Web Development</b></h4> 
+              <p>Build a custom tailored website to your customization</p> 
+            </div>
+          </div>
+          
+          
+           <div class="card2">
+            <img src="data.png" alt="Avatar" style="width:80%">
+            <div class="containercard">
+              <h4><b>Data Security</b></h4> 
+              <p>Using data protection technology to safeguard your critical data</p> 
+            </div>
+          </div>
+        </Section>
+        <hr>
+      
+          <Section id="Section4">
+    <div class="containercontact">
+        <h2><span style="color:dodgerblue;font-size: 30px; ">Contact Me</span></h2>
+          <div class="columncontact">
+            <form action="reyadContact.php" method="post">
+              <label for="fname"> Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email..">
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+      </div>
+    </footer>
+    </Section>
+     <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+    <script>
+      $(`.circlechart`).circlechart();
+    </script>
+    <script>
+        let btn = document.querySelector("button");
+
+          btn.addEventListener("click", active);
+          
+          function active() {
+            btn.classList.toggle("is_active");
+          }
+          </script>
+
+</body>
+
+</html>

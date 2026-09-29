@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Abdulrahman.css">
+    
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <div id="navMenu">
+        <div>
+            <ul>
+                <a href="Home.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="flex-container" id="about">
+        <div>
+            <h1 onmouseover="changeOn(this)">Abdulrahman Hajali</h1>
+            <p onmousemove="changeOnClq(this)">Hello, I am Abdulrahman, a passionate web developer with a commitment to crafting enjoyable and seamless online experiences. Skilled in HTML, CSS, and JavaScript, I thrive on turning creative ideas into visually appealing functional websites. My commitment to staying on top of the latest industry trends ensures that my business not only meets but exceeds today's standards of responsiveness, user experience, and efficiency. With a keen eye for detail and a problem-solving mindset, I approach each project with enthusiasm, aiming to develop digital solutions that make a lasting impression. I look forward to bringing my skills and creativity to make a meaningful contribution to your next web development project.</p>
+        </div>
+        <div>
+            <img src="Abdul-rahman.png" alt="Profile Image">
+        </div>
+    </div>
+
+    <div class="Contact" id="contact">
+        <h2>Contact</h2>
+        <form action="Abdulrahman.php" method="post">
+            <fieldset>
+                <input type="text" placeholder="First Name">
+                <br>
+                <input type="text" placeholder="Last Name">
+                <br>
+                <input type="text" placeholder="Phone number">
+                <br>
+                <button>Send</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+function changeOnClq(element) {
+    element.style.color = 'white';
+  }
+
+
+
+  function changeOn(element) {
+    element.style.color= 'black';
+  }
+    </script>
+
+</body>
+</html>

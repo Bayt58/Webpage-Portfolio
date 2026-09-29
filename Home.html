@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="HomeStyle.css">
+    <title>Home Page</title>
+</head>
+
+<body>
+
+
+    <section>
+        <header class="container">
+            <footer>
+            <div class="page">
+                <div class="logo">
+                    <a href="#"><img src="logo.png" width="12%" height="1%"></a>
+                </div>
+                <input type="checkbox" id="check">
+
+                <label for="click" class="mainicon">
+                    <div class="menu">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                </label>
+                <ul>
+                    <li><a href="#Section2" style="--navAni:2">About Us</a></li>
+                    <li><a href="#Section3" style="--navAni:2">Team Members</a></li>
+                    <li><a href="contact.html "target=_blank style="--navAni:2">Contact us</a></li>
+                </ul>
+                <label class="mode">
+                    <input type="checkbox" id="darkModeToggle">
+                    <i class='bx bxs-moon'></i>
+                </label>
+            </div>
+        </header>
+
+        
+        <Section id="Section2">
+        <div class="container">
+            <div class="main">
+                <div class="detail">
+        <div class="About">
+            
+            <br>
+            <br>
+            <br>
+            <h3><span style="color:dodgerblue;font-size: 30px;">About us</span></span></h3>
+            <br>
+            <p>This dynamic team of four software engineers combines diverse expertise and a shared passion for crafting innovative solutions. </p><p>With a collaborative spirit, they seamlessly blend their skills in areas such as front-end development, back-end architecture, </p><p>database management, and user experience design. Their portfolio showcases a range of successful projects, highlighting their ability to </p><p>tackle complex challenges and deliver high-quality software solutions. Through effective communication and a commitment to continuous learning, this </p><p>team consistently exceeds expectations, contributing to the success of every project they undertake.</p>
+
+        </div>
+        </div>
+        </div>
+        </div>
+        </Section>
+        <hr>
+        <br>
+        
+        <Section id="Section3">
+        <h1><span style="color:dodgerblue; text-align: center; font-size: 30px;">Team Members</span></h1>
+        <br>
+         <div class="card1">
+            <a href="Mohammed.html" target="_blank"> <img src="mohammed.png" alt="Photo" class="imgs" width="75%" height="75%"></a>
+            <div class="containercard">
+              <h4 style="text-align: center;"><b>Mohammed Reyad</b></h4> 
+            </div>
+          </div>
+           <div class="card2">
+            <a href="Amrport.html" target="_blank"><img src="amr.png" alt="Photo" width="90%" height="auto" ></a>
+            <div class="containercard">
+              <h4 style="text-align: center;"><b>Amr Ghuneim</b></h4> 
+            </div>
+          </div>
+          </Section>
+        <div class="card1">
+            <a href="Sarah.html" target="_blank"> <img src="Sarah.png" alt="Photo" class="imgs" width="90%" height="75%"></a>
+            <div class="containercard">
+              <h4 style="text-align: center;"><b>Sarah Eyad</b></h4>  
+            </div>
+          </div>
+          
+          
+           <div class="card2">
+            <a href="Abdulrahman.html" target="_blank"> <img src="Abdulrahman.png" alt="Photo" class="imgs" width="90%" height="75%"></a>
+            <div class="containercard">
+              <h4><b>Abdulrahman Alhaj</b></h4> 
+         
+            </div>
+          </div>
+        
+        </Section>
+        
+        <br>
+        <br>
+        <br>
+        
+     <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
